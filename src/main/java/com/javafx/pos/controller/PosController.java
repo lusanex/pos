@@ -8,10 +8,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.hibernate.QueryException;
 import org.hibernate.Session;
@@ -32,10 +29,13 @@ public class PosController implements Initializable {
     public TableColumn<Product,String> productColumn;
     @FXML
     public TableView<Product> productPriceTableView;
-    @FXML
-    public TextArea invoiceBox;
+
     @FXML
     public TextField productField;
+    @FXML
+    public ListView receipt;
+    @FXML
+    public TextField nameField, quantityField;
 
     private ObservableList<Product> PRODUCT_LIST;
     private ObservableList<Product> ITEM_LIST;
